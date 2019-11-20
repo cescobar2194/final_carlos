@@ -1,0 +1,14 @@
+{% extends 'menus/base.html' %}
+{% block content %}
+<h1 align="center">Lista de Menus</h1>
+<a class="btn btn-default" href="{% url 'menu_nuevo' %}">Menu <span class="glyphicon glyphicon-plus"></span></a>
+    <div class="post">
+      {% for menu in menus %}
+         <div class="post">
+
+             <h3>{{ menu.nombre}}</h3>
+
+         </div>
+      {% endfor %}
+    </div>
+{% endblock %}
